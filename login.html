@@ -1,0 +1,47 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-certo-1.png" type="image/x-icon">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/styles-login.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="login-form">
+          <img src="img/logo-certo-1.png">
+        <h1>Login</h1>
+        <div class="form-group">
+          <input type="text" id="usuario" name="username" required placeholder="  Usuario ou e-mail">
+        </div>
+        <div class="form-group">
+          
+          <input type="password" id="senha" placeholder="  Senha" name="password" required>
+        </div>
+        
+        <button id="butao" type="submit">Entrar</button>
+
+        <br><br>
+        <div class="button-group">
+          <a href="https://www.google.com.br/?hl=pt-BR">Esqueci a senha</a>
+          <a href="cadastro.html">Novo? Cadastre-se</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    document.getElementById("butao").addEventListener("click", function() {
+        var usuario = document.getElementById("usuario").value;
+        var senha = document.getElementById("senha").value;
+
+        // Verificação do login esperado
+        if (usuario === "allice" && senha === "alliceemo") {
+            // alert("Login bem sucedido!");
+            // Redirecionar para outra página
+            window.open("inicio.html");
+        } else {
+            alert("Usuário ou senha incorretos. Por favor, tente novamente.");
+        }
+    });
+</script>
+</html>
